@@ -79,38 +79,72 @@
   color: #1f2937 !important;
 }
 
-/* Banner background override */
+/* Banner background override - Modern Halloween style */
 .carpool-landing .carpool-banner {
-  background: #ff8c00 !important;
+  background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%) !important;
   color: #1f2937 !important;
+  box-shadow: 0 10px 30px rgba(255,140,0,.35),
+              0 4px 12px rgba(138,43,226,.2) !important;
 }
 
-/* Banner success/error states - high contrast on orange background */
+.carpool-landing .carpool-banner::after {
+  background: linear-gradient(135deg, rgba(255,107,0,.8), rgba(138,43,226,.6)) !important;
+  animation: halloweenBorderGlow 3s ease infinite !important;
+}
+
+@keyframes halloweenBorderGlow {
+  0%, 100% { background-position: 0% 50%; opacity: 0.9; }
+  50% { background-position: 100% 50%; opacity: 1; }
+}
+
+/* Banner success state - Modern green on Halloween theme */
+.carpool-landing .carpool-banner.success {
+  background: linear-gradient(135deg, #90EE90 0%, #98fb98 100%) !important;
+  box-shadow: 0 10px 30px rgba(16,185,129,.3),
+              0 4px 12px rgba(0,128,0,.2) !important;
+}
+
+.carpool-landing .carpool-banner.success::after {
+  background: linear-gradient(135deg, rgba(16,185,129,.7), rgba(0,128,0,.6)) !important;
+}
+
 .carpool-landing .carpool-banner.success .banner-text,
 .carpool-landing .carpool-banner.success .banner-text strong {
-  color: #065f46 !important; /* Dark green for contrast on orange */
+  color: #065f46 !important;
+  font-weight: 800 !important;
 }
 
 .carpool-landing .carpool-banner.success .icon {
-  color: #065f46 !important;
-  background: rgba(6, 95, 70, 0.15) !important;
-  border-color: rgba(6, 95, 70, 0.3) !important;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 6px 20px rgba(6,95,70,.5),
+              0 2px 8px rgba(16,185,129,.4) !important;
 }
 
-.carpool-landing .carpool-banner.success {
-  background: linear-gradient(120deg, #90EE90 100%, #008000 100%) !important;
+/* Banner error state - Modern red on Halloween theme */
+.carpool-landing .carpool-banner.error {
+  background: linear-gradient(135deg, #fca5a5 0%, #fecaca 100%) !important;
+  box-shadow: 0 10px 30px rgba(220,38,38,.3),
+              0 4px 12px rgba(127,29,29,.2) !important;
 }
 
+.carpool-landing .carpool-banner.error::after {
+  background: linear-gradient(135deg, rgba(220,38,38,.7), rgba(239,68,68,.6)) !important;
+}
 
 .carpool-landing .carpool-banner.error .banner-text,
 .carpool-landing .carpool-banner.error .banner-text strong {
-  color: #7f1d1d !important; /* Dark red for contrast on orange */
+  color: #7f1d1d !important;
+  font-weight: 800 !important;
 }
 
 .carpool-landing .carpool-banner.error .icon {
-  color: #7f1d1d !important;
-  background: rgba(127, 29, 29, 0.15) !important;
-  border-color: rgba(127, 29, 29, 0.3) !important;
+  background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 6px 20px rgba(127,29,29,.5),
+              0 2px 8px rgba(220,38,38,.4) !important;
 }
 
 /* FAQ details open state - orange background needs dark text */
@@ -309,11 +343,23 @@ color: #1f2937;
   color: #1f2937 !important;
 }
 
-/* Service banner icon - on orange card, needs better contrast */
+/* Service banner icon - Modern Halloween glow */
 .carpool-landing .carpool-banner .icon {
-  background: rgba(0, 0, 0, 0.1) !important;
-  color: #1f2937 !important;
-  border-color: rgba(0, 0, 0, 0.2) !important;
+  background: linear-gradient(135deg, rgba(138,43,226,.9) 0%, rgba(255,107,0,.9) 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 6px 20px rgba(138,43,226,.45),
+              0 2px 8px rgba(255,107,0,.35) !important;
+}
+
+.carpool-landing .carpool-banner .icon::before {
+  background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 100%) !important;
+}
+
+.carpool-landing .carpool-banner:hover .icon {
+  transform: scale(1.05) rotate(5deg) !important;
+  box-shadow: 0 8px 24px rgba(138,43,226,.55),
+              0 4px 12px rgba(255,107,0,.45) !important;
 }
 
 /* Video frame border effect */
